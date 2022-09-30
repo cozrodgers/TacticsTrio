@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mousePlaneLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!4 &484876173
 Transform:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496c10573e2522e4c9170abc5b0184ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {x: 0, y: 0, z: 0}
+  targetPosition: {x: 0, y: -0.86, z: 0}
 --- !u!1001 &1130872021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 1269682593}
   - component: {fileID: 1269682592}
   - component: {fileID: 1269682591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

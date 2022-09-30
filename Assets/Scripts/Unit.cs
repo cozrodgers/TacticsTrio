@@ -15,10 +15,9 @@ public class Unit : MonoBehaviour
             float moveSpeed = 4f;
             transform.position += moveDirection * Time.deltaTime * moveSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Move(new Vector3(4, 0, 4));
-        }
+       if(Input.GetMouseButtonDown(0)) {
+        Move(MouseWorld.GetPosition());
+       }
     }
     void Move(Vector3 targetPosition)
     {
