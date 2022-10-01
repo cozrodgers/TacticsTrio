@@ -7,13 +7,13 @@ public class UnitActionSystem : MonoBehaviour
 {
     public static UnitActionSystem Instance { get; private set; }
 
-
     public event EventHandler OnSelectedUnitChanged;
     [SerializeField] private LayerMask unitLayerMask;
     [SerializeField] private Unit selectedUnit;
     private void Awake()
     {
-        if(Instance != null) {
+        if (Instance != null)
+        {
             Debug.LogError("There's more than one UnitActionSystem" + transform + "-" + Instance);
             Destroy(gameObject);
             return;
@@ -26,7 +26,8 @@ public class UnitActionSystem : MonoBehaviour
         {
             if (!TryHandleUnitSelection())
             {
-                selectedUnit.Move(MouseWorld.GetPosition());
+                MoveAction moveAction = selectedUnit.GetComponent<MoveAction>();
+                moveAction.Move(MouseWorld.GetPosition());
             }
 
         }
@@ -41,7 +42,6 @@ public class UnitActionSystem : MonoBehaviour
             {
                 SetSelectedUnit(unit);
                 return true;
-
             }
         }
         return false;
