@@ -53,6 +53,7 @@ public class GridSystem
     }
     public GridObject GetGridObject(GridPosition gridPosition)
     {
+        Debug.Log(gridObjectArray[gridPosition.x, gridPosition.z]);
         return gridObjectArray[gridPosition.x, gridPosition.z];
     }
 
